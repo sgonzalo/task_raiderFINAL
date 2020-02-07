@@ -32,6 +32,7 @@ export const Layout = () => {
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUpCompany} />
 						<Route path="/signupuser" component={SignUpUser} />
+						<Route path="/signupcompany" component={SignUpCompany} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>

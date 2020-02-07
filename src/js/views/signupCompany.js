@@ -9,24 +9,24 @@ export const SignUpCompany = () => {
 				<form
 					className="sign p-3"
 					style={{ width: "40%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
-					<h1 className="text-center mt-2">Sign up Company</h1>
+					<h1 className="text-center mt-2">Sign Up Your Company</h1>
 					<div>
 						<div className="form-group">
-							<label>{"Title"}</label>
+							<label>{"Email"}</label>
 
-							<input type="text" className="form-control" placeholder="Title" />
+							<input type="text" className="form-control" placeholder="Enter Your Email" />
 						</div>
 						<div className="form-group">
-							<label>Github Link</label>
-							<input type="text" className="form-control" placeholder="Enter github link" />
+							<label>Password</label>
+							<input type="text" className="form-control" placeholder="Enter Your Password" />
 						</div>
 						<div className="form-group">
-							<label>Demo Link</label>
-							<input type="text" className="form-control" placeholder="Demo link" />
+							<label>Address</label>
+							<input type="text" className="form-control" placeholder="Enter Your Company Address" />
 						</div>
 						<div className="form-group">
-							<label>Demo Link</label>
-							<input type="text" className="form-control" placeholder="Demo link" />
+							<label>Company Name</label>
+							<input type="text" className="form-control" placeholder="Enter Your Company's Name" />
 						</div>
 					</div>
 					<div className="form-group">
@@ -35,7 +35,7 @@ export const SignUpCompany = () => {
 							type="text"
 							className="form-control"
 							// helperText={"You have " + (maxLength - descritption.length) + " left"}
-							placeholder="Company description"
+							placeholder="What's Your Company About?"
 						/>
 						{/* <p className="textLeft">
 								{"You have "} {maxLength - description.length} {" left"}
@@ -44,7 +44,7 @@ export const SignUpCompany = () => {
 
 					<Link to={"/home"}>
 						<button style={{ width: "100px" }} type="button" className="btn btn-primary form-control mr-5">
-							create
+							Sign In
 						</button>
 					</Link>
 					<Link to="/">

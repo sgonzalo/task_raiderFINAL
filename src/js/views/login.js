@@ -10,17 +10,17 @@ export const Login = () => {
 					<h1 className="text-center mt-2">Login</h1>
 					<div>
 						<div className="form-group">
-							<label>Github Link</label>
-							<input type="text" className="form-control" placeholder="Enter github link" />
+							<label>E-mail</label>
+							<input type="text" className="form-control" placeholder="Enter Your Email" />
 						</div>
 						<div className="form-group">
-							<label>Demo Link</label>
-							<input type="text" className="form-control" placeholder="Demo link" />
+							<label>Password</label>
+							<input type="text" className="form-control" placeholder="Enter Your Password" />
 						</div>
 					</div>
 					<Link to={"/signup"}>
 						<button style={{ width: "100px" }} type="button" className="btn btn-primary form-control mr-5">
-							sign up
+							Sign Up
 						</button>
 					</Link>
 					<Link to="/">

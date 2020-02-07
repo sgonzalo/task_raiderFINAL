@@ -12,25 +12,33 @@ export const SignUpUser = () => {
 						<h1 className="className=text-center mt-5">Sign up</h1>
 						<div>
 							<div className="form-group">
-								<label>{"Title"}</label>
+								<label>{"Enter You Email"}</label>
 
-								<input type="text" className="form-control" placeholder="Title" />
+								<input type="text" className="form-control" placeholder="Email" />
 							</div>
 							<div className="form-group">
-								<label>Github Link</label>
-								<input type="text" className="form-control" placeholder="Enter github link" />
+								<label>Password</label>
+								<input type="text" className="form-control" placeholder="Enter Your Password" />
 							</div>
 							<div className="form-group">
-								<label>Demo Link</label>
-								<input type="text" className="form-control" placeholder="Demo link" />
+								<label>Contact Information</label>
+								<input type="text" className="form-control" placeholder="Enter Your Phone Number" />
 							</div>
 							<div className="form-group">
-								<label>Demo Link</label>
-								<input type="text" className="form-control" placeholder="Demo link" />
+								<label>First and Last Name</label>
+								<input
+									type="text"
+									className="form-control"
+									placeholder="Enter Your First and Last Name"
+								/>
 							</div>
 							<div className="form-group">
-								<label>Demo Link</label>
-								<input type="text" className="form-control" placeholder="Demo link" />
+								<label>Skills</label>
+								<input
+									type="text"
+									className="form-control"
+									placeholder="Enter Any Unique Skills You Have"
+								/>
 							</div>
 						</div>
 
@@ -39,7 +47,7 @@ export const SignUpUser = () => {
 								style={{ width: "100px" }}
 								type="button"
 								className="btn btn-primary form-control mr-5">
-								create
+								Sign In
 							</button>
 						</Link>
 						<Link to="/home">

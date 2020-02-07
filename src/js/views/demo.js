@@ -11,10 +11,10 @@ export const Demo = () => {
 	return (
 		<div className="content">
 			<div className="left">
-				<div className="company">esquerda</div>
+				<div className="company">Sign Up as a Company</div>
 			</div>
 			<div className="right">
-				<div className="user">direita</div>
+				<div className="user">Sign Up as a User</div>
 			</div>
 		</div>
 	);
