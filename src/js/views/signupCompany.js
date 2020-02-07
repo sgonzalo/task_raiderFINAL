@@ -46,7 +46,7 @@ export const SignUpCompany = () => {
 							create
 						</button>
 					</Link>
-					<Link to="/home">
+					<Link to="/">
 						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
 							Go Back
 						</button>
