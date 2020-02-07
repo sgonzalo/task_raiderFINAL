@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 export const SignUpCompany = () => {
 	return (
-		<div className="content">
-			<div className="container">
+		<div className="backColor">
+			<div className="side2 border" />
+			<div className="side1">
 				<form
 					className="sign p-3"
 					style={{ width: "40%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
-					<h1 className="text-center mt-2">Sign up</h1>
+					<h1 className="text-center mt-2">Sign up Company</h1>
 					<div>
 						<div className="form-group">
 							<label>{"Title"}</label>

@@ -30,8 +30,14 @@
     height: 100%;
     
 }
+//Signup Company
 .sign{
-    border-style: solid;
+    position:absolute;
+    width: 36%;
+    left:5%;
+    top:8%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 // Login Page Styling
 .login{
