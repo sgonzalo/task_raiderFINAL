@@ -2,15 +2,18 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+// IMPORTING VIEWS
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Login } from "./views/login";
 import { Single } from "./views/single";
-import injectContext from "./store/appContext";
-
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 import { SignUpCompany } from "./views/signupCompany";
 import { SignUpUser } from "./views/signupUser";
+import injectContext from "./store/appContext";
+
+// IMPORTING COMPONENTS
+import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
 
 //create your first component
 export const Layout = () => {
@@ -22,10 +25,11 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter>
 				<ScrollToTop>
-					<Navbar />
+					{/* <Navbar /> */}
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
+						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUpCompany} />
 						<Route path="/signupuser" component={SignUpUser} />
 						<Route path="/single/:theid" component={Single} />
