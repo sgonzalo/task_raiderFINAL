@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import logo from "../../img/logo.png";
 
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-md navbar-light bg-light">
 			<a href="#" className="navbar-brand">
-				<img src="images/logo.svg" height="28" alt="Job Posting, Work" />
+				<img className="imgLogo" src={logo} height="28" alt="Job Posting, Work" />
 			</a>
 			<button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 				<span className="navbar-toggler-icon" />
