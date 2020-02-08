@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import street from "../../img/street.jpg";
 
 export const Login = () => {
 	return (
 		<div className="backColor">
-			<div className="side1" />
-			<div className="side2 border">
+			<div className="side1">
+				<img src={street} className="imgLogin" alt="..." />
+			</div>
+			<div className="side2">
 				<form className="p-3 login">
 					<h1 className="text-center mt-2">Login</h1>
 					<div>
