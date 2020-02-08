@@ -28,7 +28,7 @@ export const Layout = () => {
 					{/* <Navbar /> */}
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
+						{/* <Route path="/demo" component={Demo} /> */}
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUpCompany} />
 						<Route path="/signupuser" component={SignUpUser} />
