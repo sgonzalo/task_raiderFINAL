@@ -5,12 +5,12 @@ export const SignUpCompany = () => {
 	return (
 		<div className="backColor">
 			<div className="side2">
-				<img src="https://imgur.com/O1dfRgE" className="imgComp" alt="..." />
+				<img src="https://i.imgur.com/O1dfRgE.jpg" className="imgComp" alt="..." />
 			</div>
 			<div className="side1">
 				<form
 					className="sign p-3"
-					style={{ width: "40%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
+					style={{ width: "80%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
 					<h1 className="text-center mt-2">Sign Up Your Company</h1>
 					<div>
 						<div className="form-group">
