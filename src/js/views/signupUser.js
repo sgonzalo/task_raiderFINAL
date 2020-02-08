@@ -5,6 +5,8 @@ export const SignUpUser = () => {
 	return (
 		<div className="content">
 			<div className="container">
+				<div className="side2" />
+				<img src="https://i.imgur.com/svdzVi4.jpg" className="imgUser" alt="..." />
 				<div>
 					<form
 						className="sign"
