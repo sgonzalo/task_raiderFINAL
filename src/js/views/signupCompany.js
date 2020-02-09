@@ -45,13 +45,21 @@ export const SignUpCompany = () => {
 					</div>
 
 					<Link to={"/home"}>
-						<button style={{ width: "100px" }} type="button" className="btn btn-primary form-control mr-5">
-							Sign In
+						{/* This button is where it goes the POST method */}
+						<button
+							style={{ width: "100px" }}
+							type="button"
+							onClick={() => {
+								alert("Post method goes here");
+							}}
+							className="btn btn-primary form-control mr-5">
+							Create
 						</button>
 					</Link>
-					<Link to="/">
+					{/* Underlined prase instead of button? 'Already Member' */}
+					<Link to="/login">
 						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
-							Go Back
+							Member
 						</button>
 					</Link>
 				</form>

@@ -43,12 +43,15 @@ export const SignUpUser = () => {
 								/>
 							</div>
 						</div>
-
+						{/* POST Method for creating a user */}
 						<Link to={"/home"}>
 							<button
 								style={{ width: "100px" }}
 								type="button"
-								className="btn btn-primary form-control mr-5">
+								className="btn btn-primary form-control mr-5"
+								onClick={() => {
+									alert("Create a User");
+								}}>
 								Sign In
 							</button>
 						</Link>
