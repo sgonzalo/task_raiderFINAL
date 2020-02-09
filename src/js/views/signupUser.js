@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const SignUpUser = () => {
+    const { store, actions } = useContext(Context);
+	const [contactInfo, setContactInfo] = useState("");
+	const [firstandlastName, setFirstandLastName] = useState("");
+	const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [skills, setSkills] = useState("");
+    
 	return (
 		<div className="content">
 			<div className="container">
@@ -16,21 +24,39 @@ export const SignUpUser = () => {
 							<div className="form-group">
 								<label>{"Enter You Email"}</label>
 
-								<input type="text" className="form-control" placeholder="Email" />
-							</div>
+                                <input 
+                                    type="text"
+                                    defaultValue={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    className="form-control" 
+                                    placeholder="Email" 
+                                />	
+                            </div>
 							<div className="form-group">
 								<label>Password</label>
-								<input type="text" className="form-control" placeholder="Enter Your Password" />
+                                <input 
+                                    type="text"
+                                    defaultValue={password}
+                                    onChange={e => setPassword(e.target.value)}
+                                    className="form-control" 
+                                    placeholder="Enter Your Password" />
 							</div>
 							<div className="form-group">
 								<label>Contact Information</label>
-								<input type="text" className="form-control" placeholder="Enter Your Phone Number" />
+                                <input 
+                                    type="text"
+                                    defaultValue={contactInfo}
+                                    onChange={e => setContactInfo(e.target.value)}
+                                    className="form-control" 
+                                    placeholder="Enter Your Phone Number" />
 							</div>
 							<div className="form-group">
 								<label>First and Last Name</label>
 								<input
-									type="text"
-									className="form-control"
+                                    type="text"
+                                    defaultValue={firstandlastName}
+                                    onChange={e => setFirstandLastName}
+                                    className="form-control"
 									placeholder="Enter Your First and Last Name"
 								/>
 							</div>
@@ -38,7 +64,9 @@ export const SignUpUser = () => {
 								<label>Skills</label>
 								<input
 									type="text"
-									className="form-control"
+                                    className="form-control"
+                                    defaultValue={skills}
+                                    onChange={e => setSkills(e.target.value)}
 									placeholder="Enter Any Unique Skills You Have"
 								/>
 							</div>
