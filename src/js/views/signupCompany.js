@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const SignUpCompany = () => {
+	const { store, actions } = useContext(Context);
+	const [address, setAddress] = useState("");
+	const [companyDescription, setCompanyDescription] = useState("");
+	const [companyName, setCompanyName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
 	return (
 		<div className="backColor">
 			<div className="side2">
@@ -16,19 +24,43 @@ export const SignUpCompany = () => {
 						<div className="form-group">
 							<label>{"Email"}</label>
 
-							<input type="text" className="form-control" placeholder="Enter Your Email" />
+							<input
+								type="text"
+								defaultValue={email}
+								onChange={e => setEmail(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Email"
+							/>
 						</div>
 						<div className="form-group">
 							<label>Password</label>
-							<input type="text" className="form-control" placeholder="Enter Your Password" />
+							<input
+								type="text"
+								defaultValue={password}
+								onChange={e => setPassword(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Password"
+							/>
 						</div>
 						<div className="form-group">
 							<label>Address</label>
-							<input type="text" className="form-control" placeholder="Enter Your Company Address" />
+							<input
+								type="text"
+								defaultValue={address}
+								onChange={e => setAddress(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Company Address"
+							/>
 						</div>
 						<div className="form-group">
 							<label>Company Name</label>
-							<input type="text" className="form-control" placeholder="Enter Your Company's Name" />
+							<input
+								type="text"
+								defaultValue={companyName}
+								onChange={e => setCompanyName(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Company's Name"
+							/>
 						</div>
 					</div>
 					<div className="form-group">
@@ -36,6 +68,8 @@ export const SignUpCompany = () => {
 						<textarea
 							type="text"
 							className="form-control"
+							defaultValue={companyDescription}
+							onChange={e => setCompanyDescription(e.target.value)}
 							// helperText={"You have " + (maxLength - descritption.length) + " left"}
 							placeholder="What's Your Company About?"
 						/>
@@ -50,7 +84,7 @@ export const SignUpCompany = () => {
 							style={{ width: "100px" }}
 							type="button"
 							onClick={() => {
-								alert("Post method goes here");
+								actions.createCompany(address, companyDescription, companyName, email, password);
 							}}
 							className="btn btn-primary form-control mr-5">
 							Create
