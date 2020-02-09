@@ -54,7 +54,7 @@ export const SignUpUser = () => {
 								<label>First and Last Name</label>
 								<input
                                     type="text"
-                                    defaultValue={firstandlastname}
+                                    defaultValue={firstandlastName}
                                     onChange={e => setFirstandLastName(e.target.value)}
                                     className="form-control"
 									placeholder="Enter Your First and Last Name"
