@@ -1,19 +1,31 @@
-const url = "https://taskraider.herokuapp.com/company";
+const companyUrl = "https://taskraider.herokuapp.com/company";
+const userUrl = "https://taskraider.herokuapp.com/user";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			company: []
+			company: [],
+			user: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			getMethod: () => {
-				fetch(url)
+			getCompany: () => {
+				fetch(companyUrl)
 					.then(res => res.json())
 					.then(result => {
-						console.log("resulttt", result);
+						console.log("get company", result);
 						setStore({
 							company: result
+						});
+					});
+			},
+			getUser: () => {
+				fetch(userUrl)
+					.then(res => res.json())
+					.then(result => {
+						console.log("get user", result);
+						setStore({
+							user: result
 						});
 					});
 			},
@@ -30,7 +42,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 						password: password
 					})
 				}).then(() => {
-					getActions().getMethod();
+					getActions().getCompany();
+				});
+			},
+			createUser: (address, companyDescription, companyName, email, password) => {
+				fetch(url, {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						address: address,
+						company_description: companyDescription,
+						company_name: companyName,
+						email: email,
+						password: password
+					})
+				}).then(() => {
+					getActions().getUser();
 				});
 			},
 			changeColor: (index, color) => {
