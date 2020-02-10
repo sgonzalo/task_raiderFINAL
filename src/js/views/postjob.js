@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const PostJob = () => {
-	const { actions } = useContext("");
+	const { actions } = useContext(Context);
 
 	return (
 		<div className="backColor">
@@ -26,6 +26,20 @@ export const PostJob = () => {
 								className="form-control"
 								placeholder="Enter Your Email"
 							/>
+						</div>
+						<div className="form-group">
+							<label>Description</label>
+							<textarea
+								type="text"
+								className="form-control"
+								// defaultValue={companyDescription}
+								// onChange={e => setCompanyDescription(e.target.value)}
+								// helperText={"You have " + (maxLength - descritption.length) + " left"}
+								placeholder="What's Your Company About?"
+							/>
+							{/* <p className="textLeft">
+								{"You have "} {maxLength - description.length} {" left"}
+							</p> */}
 						</div>
 						<div className="form-group">
 							<label>Password</label>
@@ -57,20 +71,6 @@ export const PostJob = () => {
 								placeholder="Enter Your Company's Name"
 							/>
 						</div>
-					</div>
-					<div className="form-group">
-						<label>Description</label>
-						<textarea
-							type="text"
-							className="form-control"
-							// defaultValue={companyDescription}
-							// onChange={e => setCompanyDescription(e.target.value)}
-							// helperText={"You have " + (maxLength - descritption.length) + " left"}
-							placeholder="What's Your Company About?"
-						/>
-						{/* <p className="textLeft">
-								{"You have "} {maxLength - description.length} {" left"}
-							</p> */}
 					</div>
 
 					<Link to={"/home"}>
