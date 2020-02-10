@@ -1,5 +1,6 @@
 const companyUrl = "https://taskraider.herokuapp.com/company";
 const userUrl = "https://taskraider.herokuapp.com/user";
+const userUrl = "https://taskraider.herokuapp.com/jobposting";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
