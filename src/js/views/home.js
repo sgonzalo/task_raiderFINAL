@@ -19,6 +19,7 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="text-center mt-5">Job Posting</div>
+
 			<div className="form-group row">
 				<div className="col-2" />
 				<div className="col-8 mb-4">
