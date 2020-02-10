@@ -97,3 +97,30 @@
     right: 0;
     background-color: yellow;
 }
+.card{
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+.description{
+    position: absolute;
+    width: 75%;
+    padding:5px;
+    top: 20%;
+}
+.city{
+    position:absolute;
+    left:0;
+    bottom: 0;
+}
+
+.rate{
+    position:absolute;
+    right: 35%;
+    bottom: 0;
+}
+.hours{
+    position:absolute;
+    right: 55%;
+    bottom: 0;
+}

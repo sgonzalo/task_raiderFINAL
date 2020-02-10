@@ -3,6 +3,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Navbar } from "../component/navbar";
 import { Link } from "react-router-dom";
+import { JobCard } from "../component/jobCard";
 
 export const Home = () => {
 	return (
@@ -19,30 +20,7 @@ export const Home = () => {
 				</div>
 			</div>
 			<div className="text-center m-3">Job Posting</div>
-
-			<div className="form-group row">
-				<div className="col-2" />
-				<div className="col-8 mb-4">
-					<div className="card">
-						<div className="skills p-2">
-							<label>Management</label>
-							<label>Management</label>
-							<label>Management</label>
-							<label>Management</label>
-							{/* <label>Management</label> */}
-						</div>
-						<div className="card-body">
-							<h5 className="card-title">Card title</h5>
-							<label className="date" />
-							<p className="card-text">
-								This is a longer card with supporting text below as a natural lead-in to additional
-								content. This content is a little bit longer.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-2" />
-			</div>
+			<JobCard />
 		</div>
 	);
 };
