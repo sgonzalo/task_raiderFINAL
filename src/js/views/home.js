@@ -18,14 +18,22 @@ export const Home = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="text-center mt-5">Job Posting</div>
+			<div className="text-center m-3">Job Posting</div>
 
 			<div className="form-group row">
 				<div className="col-2" />
 				<div className="col-8 mb-4">
 					<div className="card">
+						<div className="skills p-2">
+							<label>Management</label>
+							<label>Management</label>
+							<label>Management</label>
+							<label>Management</label>
+							{/* <label>Management</label> */}
+						</div>
 						<div className="card-body">
 							<h5 className="card-title">Card title</h5>
+							<label className="date" />
 							<p className="card-text">
 								This is a longer card with supporting text below as a natural lead-in to additional
 								content. This content is a little bit longer.

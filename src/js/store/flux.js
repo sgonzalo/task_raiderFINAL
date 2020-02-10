@@ -1,12 +1,13 @@
 const companyUrl = "https://taskraider.herokuapp.com/company";
 const userUrl = "https://taskraider.herokuapp.com/user";
-const userUrl = "https://taskraider.herokuapp.com/jobposting";
+const jobPostingUrl = "https://taskraider.herokuapp.com/jobposting";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			company: [],
-			user: []
+			user: [],
+			jobPosting: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -27,6 +28,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("get user", result);
 						setStore({
 							user: result
+						});
+					});
+			},
+			getJobPosting: () => {
+				fetch(jobPostingUrl)
+					.then(res => res.json())
+					.then(result => {
+						console.log("get job Posting", result);
+						setStore({
+							jobPosting: result
 						});
 					});
 			},
