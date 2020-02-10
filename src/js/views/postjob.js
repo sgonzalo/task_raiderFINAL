@@ -1,15 +1,7 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
 
-export const SignUpCompany = () => {
-	const { actions } = useContext(Context);
-	const [address, setAddress] = useState("");
-	const [companyDescription, setCompanyDescription] = useState("");
-	const [companyName, setCompanyName] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-
+export const PostJob = () => {
 	return (
 		<div className="backColor">
 			<div className="side2">
@@ -19,15 +11,15 @@ export const SignUpCompany = () => {
 				<form
 					className="sign p-3"
 					style={{ width: "80%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
-					<h1 className="text-center mt-2">Sign Up Your Company</h1>
+					<h1 className="text-center mt-2">Post a Job</h1>
 					<div>
 						<div className="form-group">
 							<label>{"Email"}</label>
 
 							<input
 								type="text"
-								defaultValue={email}
-								onChange={e => setEmail(e.target.value)}
+								// defaultValue={email}
+								// onChange={e => setEmail(e.target.value)}
 								className="form-control"
 								placeholder="Enter Your Email"
 							/>
@@ -36,8 +28,8 @@ export const SignUpCompany = () => {
 							<label>Password</label>
 							<input
 								type="text"
-								defaultValue={password}
-								onChange={e => setPassword(e.target.value)}
+								// defaultValue={password}
+								// onChange={e => setPassword(e.target.value)}
 								className="form-control"
 								placeholder="Enter Your Password"
 							/>
@@ -46,8 +38,8 @@ export const SignUpCompany = () => {
 							<label>Address</label>
 							<input
 								type="text"
-								defaultValue={address}
-								onChange={e => setAddress(e.target.value)}
+								// defaultValue={address}
+								// onChange={e => setAddress(e.target.value)}
 								className="form-control"
 								placeholder="Enter Your Company Address"
 							/>
@@ -56,8 +48,8 @@ export const SignUpCompany = () => {
 							<label>Company Name</label>
 							<input
 								type="text"
-								defaultValue={companyName}
-								onChange={e => setCompanyName(e.target.value)}
+								// defaultValue={companyName}
+								// onChange={e => setCompanyName(e.target.value)}
 								className="form-control"
 								placeholder="Enter Your Company's Name"
 							/>
@@ -68,8 +60,8 @@ export const SignUpCompany = () => {
 						<textarea
 							type="text"
 							className="form-control"
-							defaultValue={companyDescription}
-							onChange={e => setCompanyDescription(e.target.value)}
+							// defaultValue={companyDescription}
+							// onChange={e => setCompanyDescription(e.target.value)}
 							// helperText={"You have " + (maxLength - descritption.length) + " left"}
 							placeholder="What's Your Company About?"
 						/>
@@ -84,7 +76,8 @@ export const SignUpCompany = () => {
 							style={{ width: "100px" }}
 							type="button"
 							onClick={() => {
-								actions.createCompany(address, companyDescription, companyName, email, password);
+								alert("hola");
+								// actions.createCompany(address, companyDescription, companyName, email, password);
 							}}
 							className="btn btn-primary form-control mr-5">
 							Create

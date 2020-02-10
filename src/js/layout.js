@@ -14,6 +14,7 @@ import injectContext from "./store/appContext";
 // IMPORTING COMPONENTS
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { PostJob } from "./views/postjob";
 
 //create your first component
 export const Layout = () => {
@@ -32,6 +33,7 @@ export const Layout = () => {
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUpCompany} />
 						<Route path="/signupuser" component={SignUpUser} />
+						<Route path="/postjob" component={PostJob} />
 						<Route path="/signupcompany" component={SignUpCompany} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />

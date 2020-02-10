@@ -45,16 +45,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().getCompany();
 				});
 			},
-			createUser: (address, companyDescription, companyName, email, password) => {
-				fetch(url, {
+			createUser: (contact_info, email, name, password, skills) => {
+				fetch(userUrl, {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
-						address: address,
-						company_description: companyDescription,
-						company_name: companyName,
+						contact_info: contact_info,
 						email: email,
-						password: password
+						name: name,
+						password: password,
+						skills: skills
 					})
 				}).then(() => {
 					getActions().getUser();
