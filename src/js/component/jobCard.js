@@ -12,8 +12,6 @@ export const JobCard = () => {
 								<strong>Skills Needed</strong>
 							</label>
 							<p>Management</p>
-							<p>Management</p>
-							<p>Management</p>
 						</div>
 						{/* <label>Management</label> */}
 					</div>
