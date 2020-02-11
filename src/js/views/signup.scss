@@ -58,12 +58,15 @@
     height: 90%;
     top:5%;
     left:5%;
+    padding-bottom: 15px;
 }
 .side1{
     position:absolute;
     left:0;
     width: 50%;
     height: 100%;
+    
+    
 }
 .imgLogin{
     width: 100%;
@@ -78,6 +81,7 @@
     height: 100%;
     left:50%;
     top:0;
+    
     // background-image: url('https://i.imgur.com/8N3EJbL.jpg')
 
 }
@@ -89,7 +93,8 @@
 
 .imgUser{
     width: 100%;
-    height: 100%;
+    height: 75%;
+    margin: 0 auto;
 }
 
 //Settings for Job Posting
@@ -115,8 +120,7 @@
     position: absolute;
     top: 50%;
     left: 30%;
-    
-   
+      
 }
 
 .description{

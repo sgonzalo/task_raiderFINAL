@@ -19,7 +19,14 @@ export const SignUpUser = () => {
 				<div>
 					<form
 						className="sign"
-						style={{ width: "40%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
+						style={{
+							width: "40%",
+							height: "auto",
+							marginLeft: "0",
+							marginRight: "0",
+							padding: "7px",
+							display: "block"
+						}}>
 						<h1 className="className=text-center mt-5">Sign up</h1>
 						<div>
 							<div className="form-group">
@@ -83,7 +90,7 @@ export const SignUpUser = () => {
 								onClick={() => {
 									actions.createUser(contactInfo, email, name, password, skills);
 								}}>
-								Create U
+								Create
 							</button>
 						</Link>
 						<Link to="/">

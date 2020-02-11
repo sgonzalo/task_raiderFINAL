@@ -5,10 +5,10 @@ import street from "../../img/street.jpg";
 export const Login = () => {
 	return (
 		<div className="backColor">
-			<div className="side1">
-				<img src={street} className="imgLogin" alt="..." />
-			</div>
+			<div className="side1" />
+
 			<div className="side2">
+				<img src={street} className="imgLogin" alt="..." />
 				<form className="p-3 login">
 					<h1 className="text-center mt-2">Login</h1>
 					<div>
