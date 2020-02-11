@@ -19,16 +19,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// });
 			// }
 			// Use getActions to call a function within a fuction
-			// getCompany: () => {
-			// 	fetch(companyUrl)
-			// 		.then(res => res.json())
-			// 		.then(result => {
-			// 			console.log("get company", result);
-			// 			setStore({
-			// 				company: result
-			// 			});
-			// 		});
-			// },
+			getCompany: () => {
+				fetch(companyUrl)
+					.then(res => res.json())
+					.then(result => {
+						console.log("get company", result);
+						setStore({
+							company: result
+						});
+					});
+			},
 			getUser: () => {
 				fetch(userUrl)
 					.then(res => res.json())
