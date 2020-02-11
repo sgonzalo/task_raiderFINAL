@@ -62,6 +62,26 @@ export const PostJob = () => {
 							/>
 						</div>
 						<div className="form-group">
+							<label>Password</label>
+							<input
+								type="text"
+								// defaultValue={password}
+								// onChange={e => setPassword(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Password"
+							/>
+						</div>
+						<div className="form-group">
+							<label>Address</label>
+							<input
+								type="text"
+								// defaultValue={address}
+								// onChange={e => setAddress(e.target.value)}
+								className="form-control"
+								placeholder="Enter Your Company Address"
+							/>
+						</div>
+						<div className="form-group">
 							<label>Company Name</label>
 							<input
 								type="text"

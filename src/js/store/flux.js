@@ -32,8 +32,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getJobPosting: () => {
+				// jobPostingUrl variable tht holds the URL address
 				fetch(jobPostingUrl)
+					// .then happens when fetch finishes and res is parameter we choose. It can be any name. It will holds the value
+					//coming from the fetch function. => It will be transformed that value into an object.
 					.then(res => res.json())
+					//result it's been set as a value for the jobPosting:[]
 					.then(result => {
 						console.log("get job Posting", result);
 						setStore({
