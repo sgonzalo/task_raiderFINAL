@@ -17,78 +17,78 @@ export const PostJob = () => {
 					<h1 className="text-center mt-2">Post a Job</h1>
 					<div>
 						<div className="form-group">
-							<label>{"Email"}</label>
+							<label>{"Job Title"}</label>
 
 							<input
 								type="text"
 								// defaultValue={email}
 								// onChange={e => setEmail(e.target.value)}
 								className="form-control"
-								placeholder="Enter Your Email"
+								placeholder="Enter The Job Title"
 							/>
 						</div>
 						<div className="form-group">
-							<label>Description</label>
+							<label>Job Description</label>
 							<textarea
 								type="text"
 								className="form-control"
 								// defaultValue={companyDescription}
 								// onChange={e => setCompanyDescription(e.target.value)}
 								// helperText={"You have " + (maxLength - descritption.length) + " left"}
-								placeholder="What's Your Company About?"
+								placeholder="What's The Job About?"
 							/>
 							{/* <p className="textLeft">
 								{"You have "} {maxLength - description.length} {" left"}
 							</p> */}
 						</div>
 						<div className="form-group">
-							<label>Password</label>
+							<label>City</label>
 							<input
 								type="text"
 								// defaultValue={password}
 								// onChange={e => setPassword(e.target.value)}
 								className="form-control"
-								placeholder="Enter Your Password"
+								placeholder="Where's The Job?"
 							/>
 						</div>
 						<div className="form-group">
-							<label>Address</label>
+							<label>Job Date</label>
 							<input
 								type="text"
 								// defaultValue={address}
 								// onChange={e => setAddress(e.target.value)}
 								className="form-control"
-								placeholder="Enter Your Company Address"
+								placeholder="When Is The Job?"
 							/>
 						</div>
 						<div className="form-group">
-							<label>Password</label>
-							<input
-								type="text"
-								// defaultValue={password}
-								// onChange={e => setPassword(e.target.value)}
-								className="form-control"
-								placeholder="Enter Your Password"
-							/>
-						</div>
-						<div className="form-group">
-							<label>Address</label>
+							<label>Skills</label>
 							<input
 								type="text"
 								// defaultValue={address}
 								// onChange={e => setAddress(e.target.value)}
 								className="form-control"
-								placeholder="Enter Your Company Address"
+								placeholder="Enter Required Skills"
 							/>
 						</div>
 						<div className="form-group">
-							<label>Company Name</label>
+							<label>Hours Expected</label>
 							<input
 								type="text"
 								// defaultValue={companyName}
 								// onChange={e => setCompanyName(e.target.value)}
 								className="form-control"
-								placeholder="Enter Your Company's Name"
+								placeholder="Enter Expected Hours of Work"
+							/>
+						</div>
+						<div className="form-group">
+							<label>Payment</label>
+							<input
+								type="text"
+								// defaultValue={password}
+								// onChange={e => setPassword(e.target.value)}
+								className="form-control"
+								placeholder="How Much Does This Job Pay?"
 							/>
 						</div>
 					</div>

@@ -29,12 +29,12 @@ export const JobCard = () => {
 
 								<div className="city">
 									<label>
-										Located at: <strong>{e.zip_code}</strong>
+										Location: <strong>{e.zip_code}</strong>
 									</label>
 								</div>
 								<div className="hours">
 									<label>
-										Hours expected:
+										Hours of Work Expected:
 										<strong>{e.hours_expected}</strong>
 									</label>
 								</div>

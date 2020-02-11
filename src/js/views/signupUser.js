@@ -70,7 +70,7 @@ export const SignUpUser = () => {
 									className="form-control"
 									defaultValue={skills}
 									onChange={e => setSkills(e.target.value)}
-									placeholder="Enter Any Unique Skills You Have"
+									placeholder="Enter A Skill You Have"
 								/>
 							</div>
 						</div>
