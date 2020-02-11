@@ -10,17 +10,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 			jobPosting: []
 		},
 		actions: {
+			// login: (){
+			//fetch
+			// setStore({
+			//     company: data.company,
+			//     user: data.user,
+			//     token: data.token
+			// });
+			// }
 			// Use getActions to call a function within a fuction
-			getCompany: () => {
-				fetch(companyUrl)
-					.then(res => res.json())
-					.then(result => {
-						console.log("get company", result);
-						setStore({
-							company: result
-						});
-					});
-			},
+			// getCompany: () => {
+			// 	fetch(companyUrl)
+			// 		.then(res => res.json())
+			// 		.then(result => {
+			// 			console.log("get company", result);
+			// 			setStore({
+			// 				company: result
+			// 			});
+			// 		});
+			// },
 			getUser: () => {
 				fetch(userUrl)
 					.then(res => res.json())
@@ -71,6 +79,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 						name: name,
 						password: password,
 						skills: skills
+					})
+				}).then(() => {
+					getActions().getUser();
+				});
+			},
+			createJobPosting: (hours, date, description, title, skills, payment, zipcode) => {
+				const store = getStore();
+				fetch(jobPostingUrl + "/1", {
+					method: "post",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						hours_expected: hours,
+						job_date: "date",
+						job_description: "ajhsjashjahsjahsjahsjahsjhjahsjahsjhjahsjahsjahsjahjshajhs",
+						job_title: "Titleeeeeeeee",
+						payment: "$500/h",
+						skills_needed: "html and css",
+						zip_code: "lua"
 					})
 				}).then(() => {
 					getActions().getUser();

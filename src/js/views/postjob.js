@@ -4,6 +4,13 @@ import { Context } from "../store/appContext";
 
 export const PostJob = () => {
 	const { actions } = useContext(Context);
+	const [title, setTitle] = useState("");
+	const [date, setDate] = useState("");
+	const [description, setDescription] = useState("");
+	const [hours, setHours] = useState("");
+	const [payment, setPayment] = useState("");
+	const [skills, setSkills] = useState("");
+	const [zipcode, setZipcode] = useState("");
 
 	return (
 		<div className="backColor">
@@ -25,6 +32,8 @@ export const PostJob = () => {
 								// onChange={e => setEmail(e.target.value)}
 								className="form-control"
 								placeholder="Enter The Job Title"
+								defaultValue={title}
+								onChange={e => setTitle(e.target.value)}
 							/>
 						</div>
 						<div className="form-group">
@@ -93,14 +102,13 @@ export const PostJob = () => {
 						</div>
 					</div>
 
-					<Link to={"/home"}>
+					<Link to={"/"}>
 						{/* This button is where it goes the POST method */}
 						<button
 							style={{ width: "100px" }}
 							type="button"
 							onClick={() => {
-								alert("hola");
-								// actions.createCompany(address, companyDescription, companyName, email, password);
+								actions.createJobPosting(hours, date, description, title, skills, payment, zipcode);
 							}}
 							className="btn btn-primary form-control mr-5">
 							Create

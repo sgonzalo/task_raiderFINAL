@@ -5,7 +5,9 @@ import street from "../../img/street.jpg";
 export const Login = () => {
 	return (
 		<div className="backColor">
-			<div className="side1" />
+			<div className="side1">
+				<div className="about" />
+			</div>
 
 			<div className="side2">
 				<img src={street} className="imgLogin" alt="..." />

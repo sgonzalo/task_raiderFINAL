@@ -1,35 +1,5 @@
-// .content{
-//     position:absolute;
-//     width:100%;
-//     height: 100%;
-//     top:10%;
-   
-// }
-// .left{
-//     position: absolute;
-//     left:0;
-//     width: 50%;
-//     background-color: white;
-//     height: 100%;   
-// }
-// .company{
-//     position:absolute;
-//     top:49%;
-//     left:45%;
-// }
-// .user{
-//     position:absolute;
-//     top:49%;
-//     left:45%;
-// }
-// .right{
-//     position: absolute;
-//     right:0;
-//     width: 50%;
-//     background-color: red;
-//     height: 100%;
-    
-// }
+
+
 //Signup Company
 .sign{
     position:absolute;
@@ -72,6 +42,15 @@
     width: 100%;
     height: 100%;
 
+}
+.about{
+    position:absolute;
+    width: 80%;
+    height: 80%;
+    left:10%;
+    top: 10%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 // right side
 .side2{

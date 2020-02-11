@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
 export const JobCard = () => {
 	const { store } = useContext(Context);
+	const [button, setButton] = useState("Apply");
 	console.log("testing job posting", store.jobPosting);
 	return (
 		<div>
@@ -21,6 +22,15 @@ export const JobCard = () => {
 										<p>{e.skills_needed}</p>
 									</div>
 									{/* <label>Management</label> */}
+									<button
+										className="btn btn-primary form-control m-2"
+										onClick={() => {
+											alert("email confirmation was sent");
+											setButton("Applied");
+										}}
+										style={{ position: "absolute", width: "100px", bottom: "0", left: "20%" }}>
+										{button}
+									</button>
 								</div>
 								<div className="card-body p-1">
 									<h5 className="card-title">{e.job_title}</h5>
