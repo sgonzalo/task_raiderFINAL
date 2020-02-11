@@ -19,7 +19,13 @@ export const Home = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="text-center m-3">Job Posting</div>
+			<div className="text-center m-3">
+				<font size="6">
+					<font color="blue">
+						<strong>Tasks Available</strong>
+					</font>
+				</font>
+			</div>
 			<JobCard />
 		</div>
 	);

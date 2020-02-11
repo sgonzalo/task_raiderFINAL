@@ -36,6 +36,7 @@
     width: 36%;
     left:10%;
     top:8%;
+    color: blue;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -46,6 +47,7 @@
     left:30%;
     top:30%;
     width: 45%;
+    color: blue;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -89,38 +91,59 @@
     width: 100%;
     height: 100%;
 }
+
 //Settings for Job Posting
 .skills{
     position:absolute;
     width: 25%;
     height: 100%;
     right: 0;
-    background-color: yellow;
+    background-color: #c5d9f0;
+    color: black;
+    font-weight: bold;
 }
+
 .card{
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
 }
+
+//background image in job posting opacity and position settings
+#logo{
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    
+   
+}
+
 .description{
     position: absolute;
     width: 75%;
     padding:5px;
     top: 20%;
+    color: grey
 }
+
 .city{
     position:absolute;
     left:0;
     bottom: 0;
+    color: grey;
 }
 
 .rate{
     position:absolute;
     right: 35%;
     bottom: 0;
+    color: green;
 }
+
 .hours{
     position:absolute;
     right: 55%;
     bottom: 0;
+    color: gray;
 }

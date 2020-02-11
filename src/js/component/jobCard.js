@@ -12,6 +12,7 @@ export const JobCard = () => {
 						<div className="col-2" />
 						<div className="col-8 mb-4">
 							<div className="card">
+								<img id="logo" src="logo.png" alt="..." />
 								<div className="skills p-2">
 									<div className="skillsDiv text-center ">
 										<label>
@@ -34,7 +35,7 @@ export const JobCard = () => {
 								</div>
 								<div className="hours">
 									<label>
-										Hours of Work Expected:
+										Hours Expected:
 										<strong>{e.hours_expected}</strong>
 									</label>
 								</div>
