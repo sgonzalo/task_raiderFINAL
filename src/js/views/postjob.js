@@ -61,16 +61,6 @@ export const PostJob = () => {
 							/>
 						</div>
 						<div className="form-group">
-							<label>Job Date</label>
-							<input
-								type="text"
-								// defaultValue={address}
-								// onChange={e => setAddress(e.target.value)}
-								className="form-control"
-								placeholder="When Is The Job?"
-							/>
-						</div>
-						<div className="form-group">
 							<label>Skills</label>
 							<input
 								type="text"
@@ -101,13 +91,13 @@ export const PostJob = () => {
 							/>
 						</div>
 						<div className="form-group">
-							<label>Payment</label>
+							<label>Zip Code</label>
 							<input
 								type="text"
 								defaultValue={zipcode}
 								onChange={e => setZipcode(e.target.value)}
 								className="form-control"
-								placeholder="How Much Does This Job Pay?"
+								placeholder="Enter The Job Zip Code"
 							/>
 						</div>
 					</div>
