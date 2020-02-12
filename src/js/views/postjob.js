@@ -41,8 +41,8 @@ export const PostJob = () => {
 							<textarea
 								type="text"
 								className="form-control"
-								// defaultValue={companyDescription}
-								// onChange={e => setCompanyDescription(e.target.value)}
+								defaultValue={description}
+								onChange={e => setDescription(e.target.value)}
 								// helperText={"You have " + (maxLength - descritption.length) + " left"}
 								placeholder="What's The Job About?"
 							/>
@@ -54,8 +54,8 @@ export const PostJob = () => {
 							<label>City</label>
 							<input
 								type="text"
-								// defaultValue={password}
-								// onChange={e => setPassword(e.target.value)}
+								defaultValue={date}
+								onChange={e => setDate(e.target.value)}
 								className="form-control"
 								placeholder="Where's The Job?"
 							/>
@@ -74,8 +74,8 @@ export const PostJob = () => {
 							<label>Skills</label>
 							<input
 								type="text"
-								// defaultValue={address}
-								// onChange={e => setAddress(e.target.value)}
+								defaultValue={skills}
+								onChange={e => setSkills(e.target.value)}
 								className="form-control"
 								placeholder="Enter Required Skills"
 							/>
@@ -84,8 +84,8 @@ export const PostJob = () => {
 							<label>Hours Expected</label>
 							<input
 								type="text"
-								// defaultValue={companyName}
-								// onChange={e => setCompanyName(e.target.value)}
+								defaultValue={hours}
+								onChange={e => setHours(e.target.value)}
 								className="form-control"
 								placeholder="Enter Expected Hours of Work"
 							/>
@@ -94,8 +94,18 @@ export const PostJob = () => {
 							<label>Payment</label>
 							<input
 								type="text"
-								// defaultValue={password}
-								// onChange={e => setPassword(e.target.value)}
+								defaultValue={payment}
+								onChange={e => setPayment(e.target.value)}
+								className="form-control"
+								placeholder="How Much Does This Job Pay?"
+							/>
+						</div>
+						<div className="form-group">
+							<label>Payment</label>
+							<input
+								type="text"
+								defaultValue={zipcode}
+								onChange={e => setZipcode(e.target.value)}
 								className="form-control"
 								placeholder="How Much Does This Job Pay?"
 							/>

@@ -55,7 +55,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			// This function will crete company in sign up company
 			createCompany: (address, companyDescription, companyName, email, password) => {
-				fetch(url, {
+				fetch(companyUrl, {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -85,21 +85,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 			createJobPosting: (hours, date, description, title, skills, payment, zipcode) => {
-				const store = getStore();
-				fetch(jobPostingUrl + "/1", {
-					method: "post",
+				// const store = getStore();
+				fetch(jobPostingUrl, {
+					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
 						hours_expected: hours,
-						job_date: "date",
-						job_description: "ajhsjashjahsjahsjahsjahsjhjahsjahsjhjahsjahsjahsjahjshajhs",
-						job_title: "Titleeeeeeeee",
-						payment: "$500/h",
-						skills_needed: "html and css",
-						zip_code: "lua"
+						job_date: date,
+						job_description: description,
+						job_title: title,
+						payment: payment,
+						skills_needed: skills,
+						zip_code: zipcode
 					})
 				}).then(() => {
-					getActions().getUser();
+					getActions().getJobPosting();
 				});
 			},
 			changeColor: (index, color) => {
