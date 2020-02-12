@@ -14,12 +14,21 @@
 // Login Page Styling
 .login{
     position:absolute;
-    left:13%;
-    top:35%;
-    width: 25%;
+    left:29%;
+    top:45%;
+    width: 42%;
+    height: 45%;
     color: blue;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.missionSta{
+    color: blue;
+}
+.buttonLogin{
+    position:absolute;
+    bottom:5%;
+
 }
 .backColor{
     position:absolute;
@@ -35,8 +44,13 @@
     left:0;
     width: 50%;
     height: 100%;
-    
-    
+}
+.imgLog{
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left:30%;
+    top:1%;
 }
 .imgLogin{
     width: 100%;
@@ -46,12 +60,12 @@
 .about{
     position:absolute;
     width: 80%;
-    height: 80%;
+    height: 25%;
     left:10%;
-    top: 10%;
-    color: blue;
-    //background-color: white;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 15%;
+    // color: blue;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .imgLogo{
@@ -59,7 +73,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
 
 }
 // right side
