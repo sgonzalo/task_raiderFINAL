@@ -25,8 +25,23 @@ export const Navbar = () => {
 					</a>
 				</div>
 				<div className="navbar-nav ml-auto">
+					<div className="ml-2">
+						<a href="https://www.instagram.com/task_raider" target="_blank" rel="noopener noreferrer">
+							<i className="fab fa-instagram" />
+						</a>
+					</div>
+					<div className="ml-2">
+						<a href="https://www.twitter.com/task_raider" target="_blank" rel="noopener noreferrer">
+							<i className="fab fa-twitter" />
+						</a>
+					</div>
+					<div className="ml-2">
+						<a href="https://www.facebook.com/task_raider" target="_blank" rel="noopener noreferrer">
+							<i className="fab fa-facebook-square" />
+						</a>
+					</div>
 					<Link to="/login">
-						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
+						<button className="btn btn-primary form-control ml-2" style={{ width: "100px" }}>
 							Log Out
 						</button>
 					</Link>
