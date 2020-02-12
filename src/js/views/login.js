@@ -21,8 +21,8 @@ export const Login = () => {
 							people is what moves companies and employees forward.&quot;
 						</p>
 						{/* <p className="font-italic">Santiago Gonçalo</p> */}
-						<cite className="float-right mr-2" title="Santiago Gonçalo">
-							Santiago Gonçalo
+						<cite className="float-right mr-2" title="Santiago Gonzalo">
+							- Santiago Gonzalo
 						</cite>
 					</blockquote>
 				</div>
