@@ -23,14 +23,13 @@ export const Navbar = () => {
 					<a href="#" className="nav-item nav-link">
 						Messages
 					</a>
-					<a href="#" className="nav-item nav-link disabled" tabIndex="-1">
-						Reports
-					</a>
 				</div>
 				<div className="navbar-nav ml-auto">
-					<a href="#" className="nav-item nav-link">
-						Login
-					</a>
+					<Link to="/login">
+						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
+							Log Out
+						</button>
+					</Link>
 				</div>
 			</div>
 		</nav>
