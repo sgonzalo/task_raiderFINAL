@@ -14,9 +14,9 @@
 // Login Page Styling
 .login{
     position:absolute;
-    left:30%;
-    top:30%;
-    width: 45%;
+    left:13%;
+    top:35%;
+    width: 25%;
     color: blue;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -49,8 +49,18 @@
     height: 80%;
     left:10%;
     top: 10%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: blue;
+    //background-color: white;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+
 }
 // right side
 .side2{
