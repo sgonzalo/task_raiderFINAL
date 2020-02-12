@@ -18,7 +18,9 @@ export const JobCard = () => {
 									<div className="skills p-2">
 										<div className="skillsDiv text-center ">
 											<label>
-												<strong>Skills Needed</strong>
+												<strong>
+													<u>Skills Needed</u>
+												</strong>
 											</label>
 											<p>{e.skills_needed}</p>
 										</div>
