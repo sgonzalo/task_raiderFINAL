@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import backgroundpic from "../../img/jobpostingpic.jpg";
 
 export const PostJob = () => {
 	const { actions } = useContext(Context);
@@ -14,9 +15,9 @@ export const PostJob = () => {
 
 	return (
 		<div className="backColor">
-			{/* <div className="side2">
-				<img src="https://i.imgur.com/8N3EJbL.jpg" className="imgComp" alt="..." />
-			</div> */}
+			<div>
+				<img src={backgroundpic} className="imgComp" alt="..." />
+			</div>
 			{/* <div className="side1"> */}
 			<form
 				className="sign p-3"

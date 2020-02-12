@@ -37,6 +37,9 @@ export const JobCard = () => {
 									</div>
 									<div className="card-body p-1">
 										<h5 className="card-title">{e.job_title}</h5>
+										<div>
+											<i className="fas fa-trash-alt" />
+										</div>
 										<label className="date" />
 										<p className="card-text description">{e.job_description}</p>
 									</div>

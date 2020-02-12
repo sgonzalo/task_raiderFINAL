@@ -9,6 +9,7 @@
     color: blue;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // opacity: 0.9;
 
 }
 // Login Page Styling
@@ -116,6 +117,7 @@
     border: none;
 }
 
+
 //background image in job posting opacity and position settings
 #logo{
     opacity: 0.3;
@@ -152,4 +154,10 @@
     right: 55%;
     bottom: 0;
     color: gray;
+}
+// JOB CARD
+.fas{
+    position: absolute;
+    left:72%;
+    top:4%;
 }
