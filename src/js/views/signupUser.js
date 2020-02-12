@@ -27,7 +27,12 @@ export const SignUpUser = () => {
 							padding: "7px",
 							display: "block"
 						}}>
-						<h1 className="className=text-center mt-5">Sign up</h1>
+						<h1 className="className=text-center mt-5">Looking For A Job?</h1>
+						<Link to="/signupcompany">
+							<button className="btn btn-primary form-control" style={{ width: "100px" }}>
+								Company
+							</button>
+						</Link>
 						<div>
 							<div className="form-group">
 								<label>{"Enter You Email"}</label>

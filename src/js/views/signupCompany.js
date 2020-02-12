@@ -20,6 +20,11 @@ export const SignUpCompany = () => {
 					className="sign p-3"
 					style={{ width: "80%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
 					<h1 className="text-center mt-2">Sign Up Your Company</h1>
+					<Link to="/signupuser">
+						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
+							User
+						</button>
+					</Link>
 					<div>
 						<div className="form-group">
 							<label>{"Email"}</label>
