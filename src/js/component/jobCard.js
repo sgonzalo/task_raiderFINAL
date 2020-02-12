@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
 export const JobCard = () => {
-	const { store } = useContext(Context);
+	const { actions, store } = useContext(Context);
 	const [button, setButton] = useState("Apply");
 	console.log("testing job posting", store.jobPosting);
 	return (
@@ -38,7 +38,12 @@ export const JobCard = () => {
 									<div className="card-body p-1">
 										<h5 className="card-title">{e.job_title}</h5>
 										<div>
-											<i className="fas fa-trash-alt" />
+											<i
+												className="fas fa-trash-alt"
+												onClick={() => {
+													actions.deletePosting(e.id);
+												}}
+											/>
 										</div>
 										<label className="date" />
 										<p className="card-text description">{e.job_description}</p>

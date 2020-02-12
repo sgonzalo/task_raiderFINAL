@@ -102,6 +102,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().getJobPosting();
 				});
 			},
+			deletePosting: id => {
+				fetch(jobPostingUrl + "/" + id, {
+					method: "delete"
+				}).then(() => {
+					getActions().getJobPosting();
+				});
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
