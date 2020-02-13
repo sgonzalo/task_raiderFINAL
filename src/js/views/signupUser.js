@@ -15,11 +15,11 @@ export const SignUpUser = () => {
 	return (
 		<div className="content">
 			<div className="container">
-				{/* <div className="side2" /> */}
+				<div className="side2" />
 				<img src={skyline} className="imgSkyline" alt="..." />
 				<div>
 					<div
-						className="sign"
+						className="usersign"
 						style={{
 							width: "40%",
 							height: "auto",
