@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import skyline from "../../img/skyline.jpg";
 
 export const SignUpUser = () => {
 	const { actions } = useContext(Context);
@@ -14,8 +15,8 @@ export const SignUpUser = () => {
 	return (
 		<div className="content">
 			<div className="container">
-				<div className="side2" />
-				<img src="https://i.imgur.com/svdzVi4.jpg" className="imgUser" alt="..." />
+				{/* <div className="side2" /> */}
+				<img src={skyline} className="imgSkyline" alt="..." />
 				<div>
 					<div
 						className="sign"
