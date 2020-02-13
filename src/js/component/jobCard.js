@@ -33,6 +33,7 @@ export const JobCard = () => {
 												alert("email confirmation was sent");
 												setButton("Applied");
 												actions.getEmail();
+												actions.getEmail2();
 											}}
 											style={{ position: "absolute", width: "100px", bottom: "0", left: "20%" }}>
 											{button}

@@ -5,7 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			companies: [],
 			currentUser: [],
 			jobPostings: [],
-			email: []
+			email: [],
+			email2: []
 		},
 		actions: {
 			// login: (){
@@ -44,6 +45,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(result => {
 						console.log("eeemaaaaiiiiilllll", result);
 						setStore({ email: result });
+					});
+			},
+			getEmail2: () => {
+				fetch(process.env.API_URL + "/test_email")
+					.then(res => res.json())
+					.then(result => {
+						console.log("eeemaaaa", result);
+						setStore({ email2: result });
 					});
 			},
 			getJobPosting: () => {

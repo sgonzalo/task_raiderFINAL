@@ -13,7 +13,7 @@ export const Navbar = () => {
 				<span className="navbar-toggler-icon" />
 			</button>
 			<div className="collapse navbar-collapse" id="navbarCollapse">
-				<div className="navbar-nav">
+				{/* <div className="navbar-nav">
 					<a href="#" className="nav-item nav-link active">
 						Home
 					</a>
@@ -23,19 +23,19 @@ export const Navbar = () => {
 					<a href="#" className="nav-item nav-link">
 						Messages
 					</a>
-				</div>
+				</div> */}
 				<div className="navbar-nav ml-auto">
-					<div className="ml-2">
+					<div className="ml-4">
 						<a href="https://www.instagram.com/task_raider" target="_blank" rel="noopener noreferrer">
 							<i className="fab fa-instagram" />
 						</a>
 					</div>
-					<div className="ml-2">
+					<div className="ml-4">
 						<a href="https://www.twitter.com/raider_task" target="_blank" rel="noopener noreferrer">
 							<i className="fab fa-twitter" />
 						</a>
 					</div>
-					<div className="ml-2">
+					<div className="ml-4 mr-4">
 						<a href="https://www.facebook.com/task_raider" target="_blank" rel="noopener noreferrer">
 							<i className="fab fa-facebook-square" />
 						</a>
