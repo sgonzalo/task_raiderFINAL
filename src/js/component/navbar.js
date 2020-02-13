@@ -31,7 +31,7 @@ export const Navbar = () => {
 						</a>
 					</div>
 					<div className="ml-2">
-						<a href="https://www.twitter.com/task_raider" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.twitter.com/raider_task" target="_blank" rel="noopener noreferrer">
 							<i className="fab fa-twitter" />
 						</a>
 					</div>

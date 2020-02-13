@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
-export const SignUpCompany = () => {
+export const SignUpCompany = props => {
 	const { actions } = useContext(Context);
 	const [address, setAddress] = useState("");
 	const [companyDescription, setCompanyDescription] = useState("");
@@ -16,7 +17,7 @@ export const SignUpCompany = () => {
 				<img src="https://i.imgur.com/8N3EJbL.jpg" className="imgComp" alt="..." />
 			</div>
 			<div className="side1">
-				<form
+				<div
 					className="sign p-3"
 					style={{ width: "80%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
 					<h1 className="text-center mt-2">Sign Up Your Company</h1>
@@ -83,26 +84,35 @@ export const SignUpCompany = () => {
 							</p> */}
 					</div>
 
-					<Link to={"/home"}>
-						{/* This button is where it goes the POST method */}
-						<button
-							style={{ width: "100px" }}
-							type="button"
-							onClick={() => {
-								actions.createCompany(address, companyDescription, companyName, email, password);
-							}}
-							className="btn btn-primary form-control mr-5">
-							Create
-						</button>
-					</Link>
+					{/* This button is where it goes the POST method */}
+					<button
+						style={{ width: "100px" }}
+						type="button"
+						onClick={() => {
+							actions.createCompany(
+								address,
+								companyDescription,
+								companyName,
+								email,
+								password,
+								props.history
+							);
+						}}
+						className="btn btn-primary form-control mr-5">
+						Create
+					</button>
+
 					{/* Underlined prase instead of button? 'Already Member' */}
 					<Link to="/login">
 						<button className="btn btn-primary form-control" style={{ width: "100px" }}>
 							Member
 						</button>
 					</Link>
-				</form>
+				</div>
 			</div>
 		</div>
 	);
+};
+SignUpCompany.propTypes = {
+	history: PropTypes.object
 };

@@ -1,13 +1,11 @@
-const companyUrl = "https://taskraider.herokuapp.com/company";
-const userUrl = "https://taskraider.herokuapp.com/user";
-const jobPostingUrl = "https://taskraider.herokuapp.com/jobposting";
-
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			company: [],
-			user: [],
-			jobPosting: []
+			currentCompany: null,
+			companies: [],
+			currentUser: [],
+			jobPostings: []
+			// email: []
 		},
 		actions: {
 			// login: (){
@@ -19,29 +17,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// });
 			// }
 			// Use getActions to call a function within a fuction
-			getCompany: () => {
-				fetch(companyUrl)
+			getAllCompanies: () => {
+				fetch(process.env.API_URL + "/company")
 					.then(res => res.json())
 					.then(result => {
 						console.log("get company", result);
 						setStore({
-							company: result
+							companies: result
 						});
 					});
 			},
 			getUser: () => {
-				fetch(userUrl)
+				fetch(process.env.API_URL + "/user")
 					.then(res => res.json())
 					.then(result => {
 						console.log("get user", result);
 						setStore({
-							user: result
+							currentUser: result
 						});
 					});
 			},
+			// getEmail: () => {
+			//     fetch(url1 + "test_email/")
+			//         .then(res => res.json())
+			//         .then(result => {
+			//             console.log("emailllll", result);
+			//             setStore({ email: result });
+			//         });
+			// }
 			getJobPosting: () => {
 				// jobPostingUrl variable tht holds the URL address
-				fetch(jobPostingUrl)
+				fetch(process.env.API_URL + "/jobposting")
 					// .then happens when fetch finishes and res is parameter we choose. It can be any name. It will holds the value
 					//coming from the fetch function. => It will be transformed that value into an object.
 					.then(res => res.json())
@@ -49,13 +55,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(result => {
 						console.log("get job Posting", result);
 						setStore({
-							jobPosting: result
+							jobPostings: result
 						});
 					});
 			},
 			// This function will crete company in sign up company
-			createCompany: (address, companyDescription, companyName, email, password) => {
-				fetch(companyUrl, {
+			createCompany: (address, companyDescription, companyName, email, password, history) => {
+				fetch(process.env.API_URL + "/company", {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -65,12 +71,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 						email: email,
 						password: password
 					})
-				}).then(() => {
-					getActions().getCompany();
-				});
+				})
+					.then(resp => {
+						if (resp.status === 200) return resp.json();
+						else throw Error("There was en error");
+					})
+					.then(data => {
+						setStore({ currentCompany: data });
+						history.push("/");
+					})
+					.catch(error => {
+						alert("There was an error");
+						console.log(error);
+					});
 			},
 			createUser: (contact_info, email, name, password, skills) => {
-				fetch(userUrl, {
+				fetch(process.env.API_URL + "/user", {
 					method: "post",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -84,9 +100,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().getUser();
 				});
 			},
-			createJobPosting: (hours, date, description, title, skills, payment, zipcode) => {
+			createJobPosting: (hours, date, description, title, skills, payment, zipcode, history) => {
 				// const store = getStore();
-				fetch(jobPostingUrl, {
+				const store = getStore();
+				if (!store.currentCompany) throw Error("You need to login");
+
+				fetch(process.env.API_URL + "/jobposting", {
 					method: "POST",
 					headers: { "Content-type": "application/json" },
 					body: JSON.stringify({
@@ -96,14 +115,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 						job_title: title,
 						payment: payment,
 						skills_needed: skills,
-						zip_code: zipcode
+						zip_code: zipcode,
+						company_id: store.currentCompany.id
 					})
-				}).then(() => {
-					getActions().getJobPosting();
-				});
+				})
+					.then(resp => {
+						if (resp.status === 200) return resp.json();
+					})
+					.then(data => {
+						const store = getStore();
+						setStore({ jobPostings: store.jobPostings.concat([data]) });
+						history.push("/");
+					})
+					.catch(error => {
+						alert("There was an error adding the job posting");
+						console.log("job posting error", error);
+					});
 			},
 			deletePosting: id => {
-				fetch(jobPostingUrl + "/" + id, {
+				fetch(process.env.API_URL + "/jobposting/" + id, {
 					method: "delete"
 				}).then(() => {
 					getActions().getJobPosting();

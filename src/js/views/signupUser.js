@@ -17,7 +17,7 @@ export const SignUpUser = () => {
 				<div className="side2" />
 				<img src="https://i.imgur.com/svdzVi4.jpg" className="imgUser" alt="..." />
 				<div>
-					<form
+					<div
 						className="sign"
 						style={{
 							width: "40%",
@@ -103,7 +103,7 @@ export const SignUpUser = () => {
 								Go Back
 							</button>
 						</Link>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -22,12 +22,12 @@ export const Login = () => {
 						</p>
 						{/* <p className="font-italic">Santiago Gonçalo</p> */}
 						<cite className="float-right mr-2" title="Santiago Gonzalo">
-							- Santiago Gonzalo
+							- Santiago Gonzalo and Tim Salinas
 						</cite>
 					</blockquote>
 				</div>
 				{/* Login Component */}
-				<form className="p-3 login">
+				<div className="p-3 login">
 					<h1 className="text-center mt-2">Login</h1>
 					<div>
 						<div className="form-group">
@@ -54,7 +54,7 @@ export const Login = () => {
 							</button>
 						</Link>
 					</div>
-				</form>
+				</div>
 			</div>
 			<div className="side2">
 				<img src={street} className="imgLogin" alt="..." />

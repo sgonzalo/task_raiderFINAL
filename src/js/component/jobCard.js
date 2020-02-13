@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 
 export const JobCard = () => {
 	const { actions, store } = useContext(Context);
@@ -30,6 +31,7 @@ export const JobCard = () => {
 											onClick={() => {
 												alert("email confirmation was sent");
 												setButton("Applied");
+												getEmail();
 											}}
 											style={{ position: "absolute", width: "100px", bottom: "0", left: "20%" }}>
 											{button}
@@ -74,4 +76,7 @@ export const JobCard = () => {
 				})}
 		</div>
 	);
+};
+JobCard.propTypes = {
+	history: PropTypes.object
 };

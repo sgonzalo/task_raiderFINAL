@@ -2,8 +2,9 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import backgroundpic from "../../img/jobpostingpic.jpg";
+import PropTypes from "prop-types";
 
-export const PostJob = () => {
+export const PostJob = props => {
 	const { actions } = useContext(Context);
 	const [title, setTitle] = useState("");
 	const [date, setDate] = useState("");
@@ -19,7 +20,7 @@ export const PostJob = () => {
 				<img src={backgroundpic} className="imgComp" alt="..." />
 			</div>
 			{/* <div className="side1"> */}
-			<form
+			<div
 				className="sign p-3"
 				style={{ width: "80%", height: "auto", marginLeft: "0", marginRight: "0", display: "block" }}>
 				<h1 className="text-center mt-2">Post a Job</h1>
@@ -110,18 +111,25 @@ export const PostJob = () => {
 					</div>
 					<div className="col-1" />
 					<div className="col-4 mt-5">
-						<Link to={"/"}>
-							{/* This button is where it goes the POST method */}
-							<button
-								style={{ width: "100px" }}
-								type="button"
-								onClick={() => {
-									actions.createJobPosting(hours, date, description, title, skills, payment, zipcode);
-								}}
-								className="btn btn-primary mr-3 form-control">
-								Create
-							</button>
-						</Link>
+						{/* This button is where it goes the POST method */}
+						<button
+							style={{ width: "100px" }}
+							type="button"
+							onClick={() => {
+								actions.createJobPosting(
+									hours,
+									date,
+									description,
+									title,
+									skills,
+									payment,
+									zipcode,
+									props.history
+								);
+							}}
+							className="btn btn-primary mr-3 form-control">
+							Create
+						</button>
 						{/* Underlined prase instead of button? 'Already Member' */}
 						<Link to="/">
 							<button className="btn btn-primary ml-3 form-control" style={{ width: "100px" }}>
@@ -130,8 +138,11 @@ export const PostJob = () => {
 						</Link>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 		// </div>
 	);
+};
+PostJob.propTypes = {
+	history: PropTypes.object
 };
