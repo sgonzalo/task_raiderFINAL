@@ -32,7 +32,7 @@ export const PostJob = props => {
 						<input
 							type="text"
 							// defaultValue={email}
-							// onChange={e => setEmail(e.target.value)}
+							//onChange={e => setEmail(e.target.value)}
 							className="form-control"
 							placeholder="Enter The Job Title"
 							defaultValue={title}

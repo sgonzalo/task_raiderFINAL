@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
+//import { Link } from "react-router-dom";
 
 export const JobCard = () => {
 	const { actions, store } = useContext(Context);
@@ -8,8 +9,8 @@ export const JobCard = () => {
 	console.log("testing job posting", store.jobPosting);
 	return (
 		<div>
-			{store.jobPosting &&
-				store.jobPosting.map((e, index) => {
+			{store.jobPostings != undefined &&
+				store.jobPostings.map((e, index) => {
 					return (
 						<div key={index} className="form-group row">
 							<div className="col-2" />
@@ -31,7 +32,7 @@ export const JobCard = () => {
 											onClick={() => {
 												alert("email confirmation was sent");
 												setButton("Applied");
-												getEmail();
+												actions.getEmail();
 											}}
 											style={{ position: "absolute", width: "100px", bottom: "0", left: "20%" }}>
 											{button}

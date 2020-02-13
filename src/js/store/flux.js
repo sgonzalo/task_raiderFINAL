@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentCompany: null,
 			companies: [],
 			currentUser: [],
-			jobPostings: []
-			// email: []
+			jobPostings: [],
+			email: []
 		},
 		actions: {
 			// login: (){
@@ -37,14 +37,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						});
 					});
 			},
-			// getEmail: () => {
-			//     fetch(url1 + "test_email/")
-			//         .then(res => res.json())
-			//         .then(result => {
-			//             console.log("emailllll", result);
-			//             setStore({ email: result });
-			//         });
-			// }
+			// ######################## email test ###############################
+			getEmail: () => {
+				fetch(process.env.API_URL + "/test_email_two")
+					.then(res => res.json())
+					.then(result => {
+						console.log("eeemaaaaiiiiilllll", result);
+						setStore({ email: result });
+					});
+			},
 			getJobPosting: () => {
 				// jobPostingUrl variable tht holds the URL address
 				fetch(process.env.API_URL + "/jobposting")
@@ -107,7 +108,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetch(process.env.API_URL + "/jobposting", {
 					method: "POST",
-					headers: { "Content-type": "application/json" },
+					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
 						hours_expected: hours,
 						job_date: date,
