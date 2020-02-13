@@ -5,11 +5,12 @@
     position:absolute;
     width: 36%;
     left:10%;
-    top:16%;
+    top:6%;
     color: blue;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     // opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
 
 }
 // Login Page Styling
@@ -53,6 +54,7 @@
     left:30%;
     top:1%;
 }
+
 .imgLogin{
     width: 100%;
     height: 100%;
@@ -115,10 +117,18 @@
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
+    
 }
 
 
 //background image in job posting opacity and position settings
+.imgFence{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
 #logo{
     opacity: 0.3;
     position: absolute;

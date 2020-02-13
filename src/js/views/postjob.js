@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import backgroundpic from "../../img/jobpostingpic.jpg";
+//import backgroundpic from "../../img/jobpostingpic.jpg";
 import PropTypes from "prop-types";
+import fence from "../../img/fence.jpg";
 
 export const PostJob = props => {
 	const { actions } = useContext(Context);
@@ -17,7 +18,7 @@ export const PostJob = props => {
 	return (
 		<div className="backColor">
 			<div>
-				<img src={backgroundpic} className="imgComp" alt="..." />
+				<img src={fence} className="imgFence" alt="..." />
 			</div>
 			{/* <div className="side1"> */}
 			<div
