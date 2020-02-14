@@ -37,7 +37,8 @@ const injectContext = PassedComponent => {
 			state.actions.getAllCompanies();
 			state.actions.getUser();
 			state.actions.getJobPosting();
-			setState({ ...state, store: JSON.parse(localStorage.getItem("my-store")) });
+			const store = JSON.parse(localStorage.getItem("my-store"));
+			if (store) setState({ ...state, store });
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

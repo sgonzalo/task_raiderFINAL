@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export const JobCard = () => {
 	const { actions, store } = useContext(Context);
 	const [button, setButton] = useState("Apply");
-	console.log("testing job posting", store.jobPosting);
+	console.log("testing job posting", store.jobPostings);
 	return (
 		<div>
 			{store.jobPostings != undefined &&

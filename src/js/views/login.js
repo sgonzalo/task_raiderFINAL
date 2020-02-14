@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import street from "../../img/street.jpg";
 import logo from "../../img/logo.png";
+import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
-export const Login = () => {
+export const Login = props => {
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const { actions, store } = useContext(Context);
 	return (
 		<div className="backColor">
 			<div className="side1">
@@ -32,11 +37,23 @@ export const Login = () => {
 					<div>
 						<div className="form-group">
 							<label>E-mail</label>
-							<input type="text" className="form-control" placeholder="Enter Your Email" />
+							<input
+								type="text"
+								className="form-control"
+								placeholder="Enter Your Email"
+								value={email}
+								onChange={e => setEmail(e.target.value)}
+							/>
 						</div>
 						<div className="form-group">
 							<label>Password</label>
-							<input type="text" className="form-control" placeholder="Enter Your Password" />
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Enter Your Password"
+								value={password}
+								onChange={e => setPassword(e.target.value)}
+							/>
 						</div>
 					</div>
 					<div className="buttonLogin">
@@ -44,15 +61,20 @@ export const Login = () => {
 							<button
 								style={{ width: "100px" }}
 								type="button"
-								className="btn btn-primary form-control mr-5">
+								className="btn btn-primary form-control mr-1">
 								Sign Up
 							</button>
 						</Link>
-						<Link to="/">
-							<button className="btn btn-primary form-control" style={{ width: "100px" }}>
+						<button to="/">
+							<button
+								onClick={() => {
+									actions.login(email, password, props.history);
+								}}
+								className="btn btn-primary form-control"
+								style={{ width: "100px" }}>
 								Login
 							</button>
-						</Link>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -61,4 +83,7 @@ export const Login = () => {
 			</div>
 		</div>
 	);
+};
+Login.propTypes = {
+	history: PropTypes.object
 };

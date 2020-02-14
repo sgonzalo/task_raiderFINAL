@@ -9,14 +9,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 			email2: []
 		},
 		actions: {
-			// login: (){
-			//fetch
-			// setStore({
-			//     company: data.company,
-			//     user: data.user,
-			//     token: data.token
-			// });
-			// }
+			login: (email, password, history) => {
+				fetch(process.env.API_URL + "/login", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						email,
+						password
+					})
+				})
+					.then(resp => {
+						if (resp.status === 200) {
+							return resp.json();
+						}
+						throw new Error("Invalid username or password");
+					})
+					.then(data => {
+						setStore({
+							company: data.company,
+							user: data.user,
+							token: data.token
+						});
+						history.push("/");
+					})
+					.catch(error => console.log(error));
+			},
 			// Use getActions to call a function within a fuction
 			getAllCompanies: () => {
 				fetch(process.env.API_URL + "/company")
